@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico')
+
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&family=Marck+Script&display=swap')
+
+// font-family: 'Marck Script', cursive
+// font-family: 'Istok Web', sans-serif
+
+
+$mainColor: #00BFFF
+$accentColor: adjust-hue(rgba(#000, .36), 250)
+$contentColor: darken($accentColor, 15)
+$lightColor: #fff
+
+$inputsHeight: 4rem
+
+
+$one: #00BFFF
+$two: $contentColor
+$size: 250px
+$size2: $size / 3
+$speed: 60s
+
+
+@mixin fildSizes
+	padding-left: $inputsHeight / 5
+	margin-bottom: $inputsHeight / 5
+	height: $inputsHeight
+	color: $lightColor
+	font-size: 24px
+	line-height: $inputsHeight
+
+*
+	margin: 0
+	padding: 0
+	user-select: none
+	box-sizing: border-box
+	-webkit-tap-highlight-color: transparent
+	font-smoothing: antialiased
+
+html,body
+	height: 100%
+
+
+.container
+	max-height: 100%
+	min-height: 100%
+	padding: $inputsHeight / 5
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	align-items: center
+	background: $mainColor
+
+
+.form-wrap
+	position: relative
+	margin: auto
+	width: 100%
+	max-width: 660px
+	padding: $inputsHeight / 2.5
+	background: $accentColor
+	border-radius: $inputsHeight / 5
+	box-shadow: 0 0 30px rgba(0,0,0,.5)
+	animation: boxShadow 4s ease-in infinite
+	@keyframes boxShadow
+		50%
+			box-shadow: 0 0  90px  rgba(0,0,0,.5)
+
+
+.num-form
+	position: relative
+	z-index: 2
+	font-family: Pacifico
+	&__content
+		border: none
+	&__radio
+		position: absolute
+		opacity: 0
+
+	&__radio + &__label + &__content
+		display: none
+
+	&__radio:checked + &__label + &__content
+		display: block
+
+	&__radio:checked + &__label
+		background: $contentColor
+		color: $lightColor
+		border-color: transparent
+		text-shadow: 0 0 1px rgba(255,255,255,.5)
+		animation: textShadow 4s ease-in infinite
+		@keyframes textShadow
+			50%
+				text-shadow: 0 0 25px rgba(255,255,255,.5)
+	&__label
+		width: 50%
+		display: inline-block
+		background: none
+		font-family: 'Marck Script' , cursive
+		cursor: pointer
+		border: $inputsHeight / 25 solid $contentColor
+		@include fildSizes
+		font-size: 30px
+		color: $contentColor
+		&--right
+			position: absolute
+			top: 0
+			right: 0
+		&:first-letter
+			color: adjust-hue($mainColor, 240)
+
+	&__input,
+	&__text,
+	&__btn
+		display: block
+		width: 100%
+		border: $inputsHeight / 50 solid rgba(0,0,0,.05)
+		font-family: monospace
+		outline: none
+		text-transform: uppercase
+		background: linear-gradient(to top, rgba(255,255,255,.5) 0%,transparent 150%)
+		@include fildSizes
+
+	&__input::placeholder,
+	&__text
+		color: $lightColor
+	&__input
+		color: #333
+
+		&--date::-webkit-inner-spin-button
+			display: none
+		&--date::-webkit-calendar-picker-indicator
+			margin-right: $inputsHeight / 5
+			color: $contentColor
+			opacity: 1
+			cursor: pointer
+			filter: drop-shadow(0 2px 2px #000)
+			background: none
+
+	&__text
+		text-align: center
+
+	&__btn
+		margin-bottom: 0
+		border-bottom: 4px solid darken($contentColor, 20)
+		text-align: center
+		cursor: pointer
+		transition: background-color .3s ease
+		// font-family: 'Istok Web' , sans-serif
+		font-size: 35px
+		&:hover
+			background-color: darken($contentColor, 40)
+// .bg-gradient
+// 	color: transparent
+// 	background-position: 0% 0%
+// 	background-image: linear-gradient($one 50%, rgba($mainColor,.75) 50%), linear-gradient(90deg,rgba($mainColor,.75) 50%, $two 50%)
+// 	background-size: $size $size / 10
+// 	background-clip: text
+// 	// filter: drop-shadow(0 0 4px rgba($mainColor,.5))
+// 	animation: bgTopColor $speed * 2 ease-in-out infinite
+// 	@keyframes bgTopColor
+// 			50%
+// 				background-position-x: 100%
+
+
+
+@media screen and (max-width: 768px)
+	html
+		font-size: 16px
+	.form-wrap
+		margin-bottom: 0
+	.num-form__label
+		display: block
+		width: 100%
+		margin-bottom: $inputsHeight + ($inputsHeight / 2.5)
+	.num-form__label--right
+		top: $inputsHeight + ($inputsHeight / 5)
+	.num-form__text
+		padding-right: 0
+		padding-left: 0
+	.num-form__input
+		&--date
+			padding-top: $inputsHeight / 5
