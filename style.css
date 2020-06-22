@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 @import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&family=Marck+Script&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +38,7 @@ html, body {
 }
 @keyframes boxShadow {
   50% {
-    box-shadow: 0 0 90px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 90px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -68,7 +69,7 @@ html, body {
 }
 @keyframes textShadow {
   50% {
-    text-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+	text-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
   }
 }
 .num-form__label {
@@ -145,30 +146,30 @@ html, body {
 
 @media screen and (max-width: 768px) {
   html {
-    font-size: 16px;
+	font-size: 16px;
   }
 
   .form-wrap {
-    margin-bottom: 0;
+	margin-bottom: 0;
   }
 
   .num-form__label {
-    display: block;
-    width: 100%;
-    margin-bottom: 5.6rem;
+	display: block;
+	width: 100%;
+	margin-bottom: 5.6rem;
   }
 
   .num-form__label--right {
-    top: 4.8rem;
+	top: 4.8rem;
   }
 
   .num-form__text {
-    padding-right: 0;
-    padding-left: 0;
+	padding-right: 0;
+	padding-left: 0;
   }
 
   .num-form__input--date {
-    padding-top: 0.8rem;
+	padding-top: 0.8rem;
   }
 }
 
