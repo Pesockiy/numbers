@@ -1,5 +1,6 @@
 //writing text on labels
 export const writingText = item => {
+    
 	return function () {
 
 		let itemVal = item.getAttribute('data-name'),
@@ -19,16 +20,18 @@ export const writingText = item => {
 			oldItem.textContent = oldItem.getAttribute('data-name');
 		}
 
-		(function () {
+		// (function () {
 
-			if (counter < itemVal.length) {
+		// 	if (counter < itemVal.length) {
 
-				item.textContent += itemVal[counter];
-				counter++;
-				timer = setTimeout(arguments.callee, 50);
+		// 		item.textContent += itemVal[counter];
+		// 		counter++;
+		// 		timer = setTimeout(arguments.callee, 50);
 
-			};
-		})();
+		// 	};
+		// })();
+
+	
 
 		oldItem = item;
 

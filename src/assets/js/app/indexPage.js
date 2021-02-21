@@ -1,4 +1,12 @@
-import {writingText} from '../modules/towrite'
+import {
+	event
+} from 'jquery';
+import {
+	writingText
+} from '../modules/towrite'
+import {
+	writeTextWDelay
+} from '../modules/writeText'
 
 const arrayOfAlphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'.split(''),
 	objectToCompare = {},
@@ -96,3 +104,14 @@ const numOfSoul = () => {
 
 setName.addEventListener('click', numOfName);
 setSoul.addEventListener('click', numOfSoul);
+// window.addEventListener('click', writeTextWDelay(this))
+// document.querySelector('#bbb').click = writeTextWDelay()
+
+// let clickToWriteWDelayHandler = (e) => {
+// 	return () => {
+// 		e = event.target;
+// 		console.log(e)
+// 	}
+// }
+
+window.addEventListener('click', writeTextWDelay(document.querySelector('#bbb')));
