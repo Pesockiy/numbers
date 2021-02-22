@@ -9,20 +9,21 @@
 </head>
 <body>
 	<div class="container">
+		<p class="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, perspiciatis, ea fugit tempora impedit reiciendis explicabo culpa eveniet, tenetur cum excepturi at? Necessitatibus iure magnam corrupti similique fugit officia sit.</p>
 		<div class="form-wrap">
 			<form action="#" class="num-form">
 				<div class="num-form__group">
 					<input type="radio" name="radio" id="radio-left" class="num-form__radio" checked>
-					<label for="radio-left" class="num-form__label active num-form__label--left" data-name="Число имени">Число имени</label>
+					<label id='write-name' for="radio-left" class="num-form__label active num-form__label--left" data-name="Число имени">Число имени</label>
 					<fieldset class="num-form__content num-form__content--left">
 						<input id="name" name="input-name" type="text" placeholder="Введите имя" class="num-form__input num-form__input--text">
 						<label id="labelForName" for="input-name" class="num-form__text">Число имени</label>
-						<button id='bbb' type="button" class="bg-gradient num-form__btn">рассчитать</button>
+						<button type="button" class="bg-gradient num-form__btn">рассчитать</button>
 					</fieldset>
 				</div>
 				<div class="num-form__group">
 					<input type="radio" name="radio" id="radio-right" class="num-form__radio">
-					<label for="radio-right" class="num-form__label num-form__label--right" data-name="Число судьбы">Число судьбы</label>
+					<label id='write-date' for="radio-right" class="num-form__label num-form__label--right" data-name="Число судьбы">Число судьбы</label>
 					<fieldset class="num-form__content num-form__content--right">
 						<input name="input-date" type="date" class="num-form__input num-form__input--date" id="date">
 						<label for="input-date" id="labelForDate" class="num-form__text">Число судьбы</label>

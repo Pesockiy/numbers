@@ -1,39 +1,39 @@
-//writing text on labels
-export const writingText = item => {
+// //writing text on labels
+// export const writingText = item => {
     
-	return function () {
+// 	return function () {
 
-		let itemVal = item.getAttribute('data-name'),
-			counter = 0;
+// 		let itemVal = item.getAttribute('data-name'),
+// 			counter = 0;
 
-		if (item.classList.contains('active')) return;
+// 		if (item.classList.contains('active')) return;
 
-		if (oldItem.classList.contains('active')) {
-			oldItem.classList.remove('active');
-		};
+// 		if (oldItem.classList.contains('active')) {
+// 			oldItem.classList.remove('active');
+// 		};
 
-		item.classList.add('active');
-		item.textContent = '';
+// 		item.classList.add('active');
+// 		item.textContent = '';
 
-		if (timer) {
-			clearTimeout(timer);
-			oldItem.textContent = oldItem.getAttribute('data-name');
-		}
+// 		if (timer) {
+// 			clearTimeout(timer);
+// 			oldItem.textContent = oldItem.getAttribute('data-name');
+// 		}
 
-		// (function () {
+// 		// (function () {
 
-		// 	if (counter < itemVal.length) {
+// 		// 	if (counter < itemVal.length) {
 
-		// 		item.textContent += itemVal[counter];
-		// 		counter++;
-		// 		timer = setTimeout(arguments.callee, 50);
+// 		// 		item.textContent += itemVal[counter];
+// 		// 		counter++;
+// 		// 		timer = setTimeout(arguments.callee, 50);
 
-		// 	};
-		// })();
+// 		// 	};
+// 		// })();
 
 	
 
-		oldItem = item;
+// 		oldItem = item;
 
-	};
-};
+// 	};
+// };

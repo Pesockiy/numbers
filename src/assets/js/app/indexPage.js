@@ -1,7 +1,4 @@
 import {
-	event
-} from 'jquery';
-import {
 	writingText
 } from '../modules/towrite'
 import {
@@ -22,13 +19,23 @@ const arrayOfAlphabet = 'абвгдеёжзийклмнопрстуфхцчшщ�
 
 	reducer = (sum, i) => sum + i;
 
-let oldItem = document.querySelector('.active'),
-	timer;
+let oldItem = document.querySelector('.active');
 
 
 
-textSoul.addEventListener('click', writingText(textSoul));
-textName.addEventListener('click', writingText(textName));
+
+let buttonDate = document.querySelector('#write-date'),
+	buttonName = document.querySelector('#write-name');
+
+// buttonDate.addEventListener('click', writeTextWDelay(buttonDate));
+// buttonName.addEventListener('click', writeTextWDelay(buttonName));
+
+let g = new writeTextWDelay(buttonDate,buttonDate.getAttribute('data-name'),50);
+let h = new writeTextWDelay(buttonName,buttonName.getAttribute('data-name'),50);
+
+g.click();
+h.click();
+
 
 
 let x = 1;
@@ -101,17 +108,3 @@ const numOfSoul = () => {
 	countingNum(inputDate.value.split("-"), outputDate);
 
 };
-
-setName.addEventListener('click', numOfName);
-setSoul.addEventListener('click', numOfSoul);
-// window.addEventListener('click', writeTextWDelay(this))
-// document.querySelector('#bbb').click = writeTextWDelay()
-
-// let clickToWriteWDelayHandler = (e) => {
-// 	return () => {
-// 		e = event.target;
-// 		console.log(e)
-// 	}
-// }
-
-window.addEventListener('click', writeTextWDelay(document.querySelector('#bbb')));
